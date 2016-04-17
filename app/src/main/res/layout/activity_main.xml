@@ -1,0 +1,30 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:text="@string/hondana_copy" />
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hondana_logo"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:contentDescription="ホンダナ"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/banner"
+        android:scaleType="fitStart"
+        android:contentDescription="名作で始める新生活"
+        />
+
+</LinearLayout>
