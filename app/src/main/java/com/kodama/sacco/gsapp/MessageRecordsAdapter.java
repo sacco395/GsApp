@@ -1,5 +1,5 @@
 //ListViewに１つのセルの情報(message_item.xmlとMessageRecord)を結びつけるためのクラス
-package com.gashfara.mogi.gsapp;
+package com.kodama.sacco.gsapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -34,15 +34,20 @@ public class MessageRecordsAdapter extends ArrayAdapter<MessageRecord> {
 
         //レイアウトにある画像と文字のViewを所得します。
         NetworkImageView imageView = (NetworkImageView) convertView.findViewById(R.id.image1);
-        TextView textView = (TextView) convertView.findViewById(R.id.text1);
+        TextView textView1 = (TextView) convertView.findViewById(R.id.title1);
+        TextView textView2 = (TextView) convertView.findViewById(R.id.author1);
+        TextView textView3 = (TextView) convertView.findViewById(R.id.text1);
 
-        //表示するセルの位置からデータをMessageRecordのデータを取得します。
+        //表示するセルの位置からデータをMessageRecordのデータを取得します
         MessageRecord imageRecord = getItem(position);
 
         //mImageLoaderを使って画像をダウンロードし、Viewにセットします。
         imageView.setImageUrl(imageRecord.getImageUrl(), mImageLoader);
         //Viewに文字をセットします。
-        textView.setText(imageRecord.getComment());
+        textView1.setText(imageRecord.getTitle());
+        textView2.setText(imageRecord.getAuthor());
+        textView3.setText(imageRecord.getComment());
+
         //1つのセルのViewを返します。
         return convertView;
     }

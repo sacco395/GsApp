@@ -1,30 +1,18 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:layout_gravity="center"
-        android:text="@string/hondana_copy" />
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/hondana_logo"
-        android:layout_marginBottom="20dp"
-        android:layout_centerInParent="true"
-        android:scaleType="fitCenter"
-        android:contentDescription="ホンダナ"/>
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/banner"
-        android:scaleType="fitStart"
-        android:contentDescription="名作で始める新生活"
-        />
+    android:background="#f3f3f3"
+    tools:context=".MainActivity">
+
+    <GridView android:id="@+id/mylist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2"
+        android:layout_margin="20dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:text="@string/hello_world" />
 
 </LinearLayout>
